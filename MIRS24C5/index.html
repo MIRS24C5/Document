@@ -34,7 +34,7 @@
 
     <tr>
       <td>A01</td>
-      <td>2025.1.11</td>
+      <td>2025.1.15</td>
       <td>細江哲舟</td>
       <td></td>
       <td>初版</td>
@@ -84,9 +84,9 @@
       </tr>
   </table>
 
-  <h3>リポジトリ</h3>
+  <h3>GitHub</h3>
 
-  <a href="https://github.com/MIRS24C5"><b>GitHub</b></a>
+  <a href="https://github.com/MIRS24C5"><b>MIRS24C5</b></a>
 
   <hr>
 
@@ -94,15 +94,44 @@
 
   <div class="section">
       <h2>1. 問題の特定</h2>
-      <p></p>
+      <p>
+        現状の標準機では超えられない段差が目の前にあったとしてもそのまま前進してしまう。ところが、目の前にある壁を全て障害物だと判定してしまうと、超えられる段差も障害物として判定されてしまう恐れがある。また、下方向の段差に対しても高すぎるとそのまま落下してしまう。これらの問題から、ロボットの進路上にある様々な段差を通過できるかどうか判定し、その次の動作に繋げる必要性が想定される。 
+      </p>
   </div>
 
   <div class="section">
       <h2>2. 情報収集と分析</h2>
+      <p>
+        例えば、ロボット掃除機では屋内での障害物検知に超音波センサを使用している。超音波センサは周囲の光源や対象物の透明度に左右されることなく距離測定を行うことができる。これを用いて前方の障害物を検知し、高さまで特定できればロボットが通過可能であるかどうか判定できると思われる。 
+      </p>
   </div>
 
   <div class="section">
       <h2>3. 仮説の設定</h2>
+      <p>
+        超音波センサを上下2つ設置する。下のセンサは超えられる段差も含めて検知できるようにし、上のセンサは超えられない段差を検知するようにする。これにより、前方にある段差が超えられるかどうかを判定できると考える。落下検知についてはロボット端部に下向きの超音波センサを設置し、一定程度の高度を検知することで落下防止をすることができる。 
+      </p>
+      <table class="table010">
+        <caption>使用予定のセンサ</caption>
+        <tr>
+          <th>種類</th>
+          <th>型番</th>
+          <th>個数</th>
+          <th>備考</th>
+        </tr>
+        <tr>
+          <td>超音波センサ</td>
+          <td>RUS-04</td>
+          <td>3</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>赤外線センサ</td>
+          <td>GP2Y0A02YK</td>
+          <td>3</td>
+          <td>比較用</td>
+        </tr>
+      </table>
   </div>
 
   <div class="section">
@@ -114,7 +143,15 @@
   </div>
 
   <div class="section">
-      <h2>新たな知見の発見</h2>
+      <h2>6. 新たな知見の発見</h2>
+  </div>
+
+  <div class="section">
+      <h2>7. 参考文献</h2>
+      <ol>
+        <li>TDK:ロボット掃除機に搭載されているセンサの仕組み, TDK Product Center, (2022/8), https://product.tdk.com/ja/techlibrary/applicationnote/how-service-robots-make-sense.html, 参照2024/12/18. </li>
+        <li>キーエンス:超音波センサと光学式センサの比較, センサとは.com, https://www.keyence.co.jp/ss/products/sensor/sensorbasics/us_comparison.jsp, 参照2024/12/18. </li>
+      </ol>
   </div>
 
   
