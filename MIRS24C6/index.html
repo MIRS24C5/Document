@@ -119,14 +119,14 @@
       <h2>4. 実験・検証</h2>
       <p>以下の手順で実験を行った:</p>
       <ol>
-        <li>Pythonの環境構築を行い、OpenCVを使ってwebカメラの使用</li>
-        <li>WEBカメラの映像をRasqberry Piに表示、認識</li>
+        <li>Python(ver3.10.11)の環境構築を行い、OpenCV(ver4.10.0)を使ってwebカメラの使用</li>
+        <li>WEBカメラの映像をRaspberry Piに表示、認識</li>
         <li>Rasberry Pi上の画面にQRコードの読み取り値・サイズ、中心からの距離(画像ピクセル数)を表示</li>
         <li>QRコードが中心に来るようにwebカメラをサーボモータにより回転</li>
         <li>Pythonからの値をArduinoのプラグラムに代入できるようにプログラム作成</li>
         <li>webカメラの映像からMIRS標準機を回転</li>
       </ol>
-      <p>webカメラはlogicool(HD 720p/30fps)を使用した</p>
+      <p>Raspberry Pi4 modelB 4GB,Arduino R3 WiFi,Iwebカメラはlogicool(HD 720p/30fps)を使用した</p>
     </div>
 
     <div class="section">
@@ -143,7 +143,7 @@
       <h2>新たな知見の発見</h2>
       <p>本技術探究を通じて以下のような成果を得た:</p>
       <ul>
-        <li>現段階では動作が重いため、Rasberry Piを新たなコンピュータに変更またはプログラムの軽量化を行う必要がある。</li>
+        <li>現段階では動作が重いため、Raspberry Piを新たなコンピュータに変更(メモリが大きいもの、Jetsonなど高性能なもの)またはプログラムの軽量化を行う必要がある。</li>
         <li>QRコードの認識性は高く非常に実用的ではある。そのため、QRコードの指令を実際に反映させることができるようにしたい。</li>
         <li>今はQRコードの方向へ動くことしかできないため、今後は遠い位置から認識し向かっていく必要がある。</li>
       </ul>
