@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>MIRS24A1-TANQ-0001 ドキュメント管理台帳</title>
-  <link rel=stylesheet href="style.css" type="text/css" href="img.css">
+  <link rel=stylesheet href="style.css" type="text/css" >
 </head>
 
 <body bgcolor="#000000" text="#ff00ff" link="#ff0000" vlink="#ffff00" alink="#0000ff">
@@ -34,7 +34,7 @@
 
     <tr>
       <td>A01</td>
-      <td>2025.2.17</td>
+      <td>2025.2.18</td>
       <td>中屋飛鳥</td>
       <td></td>
       <td>初版</td>
@@ -73,7 +73,7 @@
       <tr>
         <td>3</td>
         <td>中村悠一朗</td>
-        <td>報告書作成</td>
+        <td>報告書作成、プログラム改善</td>
         <td></td>
       </tr>
       <tr>
@@ -110,7 +110,7 @@
       <ul>
         <li>QRコードにプログラムを保存することで個々のプログラムが小さくなる</li>
         <li>破損しにくいQRコードを用いることでより正確な値を読み込める</li>
-        <li>GPS、タスク読み込み等を一括してQRコードにまとめることができる</li>
+        <li>タスク読み込み等を一括してQRコードにまとめることができる</li>
       </ul>
     </div>
 
@@ -133,16 +133,19 @@
       <p>Aruduinoのコードは標準プログラムを以下のように追加した</p>
       <p><img src=Arduino1.png height="600"></p>
       <p><img src=Arduino2.png height="600"></p>
+
     </div>
 
     <div class="section">
       <h2>5. 結果の評価</h2>
       <p>実験結果から以下のようになった</p>
       <ul>
-        <li>動作にカクツキがあるが、QRコードの方へ機体を向かせることができた。</li>
         <li>画像認識のプログラムについて理解を深めることができた。</li>
+        <li>動作にカクツキがあるが、QRコードの方へ機体を向かせることができた(動画1)。</li>
+        <p><video src=VID_20250218162352.mp4 controls></p>
       </ul>
-      <p>PCからの通信ではギリギリ動作できたが無線での通信では安定しないという課題が出た。</p>
+      <p>Windows PCでは動作したが。raspberry piでの処理は安定しないという課題(動画2)が出た。</p>
+      <p><video src=761557474.202086.mp4 height="600" controls></video></p>
     </div>
 
     <div class="section">
@@ -153,8 +156,7 @@
         <li>QRコードの認識性は高く非常に実用的ではある。そのため、QRコードの指令を実際に反映させることができるようにしたい。</li>
         <li>今はQRコードの方向へ動くことしかできないため、今後は遠い位置から認識し向かっていく必要がある。</li>
       </ul>
-      <p>これらの成果をMIRSMG5標準機に反映し、QRコードの追跡性の向上また画像認識への実用化へ向かっていきたい。</p>
-      <p>また今回OpenCVを用いため、顔認証といった他の分野にも応用していきたい。</p>
+      <p>これらの成果をMIRSMG5標準機に反映し、QRコードの追跡性の向上また画像認識への実用化へ向かっていきたい。<br>また今回OpenCVを用いため、今後において顔認証といった他の分野にも応用していきたい。</p>
     </div>
 
 
